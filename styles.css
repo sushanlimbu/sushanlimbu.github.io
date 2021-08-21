@@ -165,14 +165,36 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/banner_photo.png") no-repeat center;
+    background: url("images/banner.JPG") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    z-index: 1;
 }
+
+.home::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:black ;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* .home-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    justify-content: flex-start;
+} */
+
 .home .max-width{
   width: 100%;
   display: flex;
@@ -180,6 +202,7 @@ section .title::after{
 .home .max-width .row{
   margin-right: 0;
 }
+
 .home .home-content .text-1{
     font-size: 27px;
 }
